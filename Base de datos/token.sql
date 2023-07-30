@@ -1,0 +1,6 @@
+CREATE TABLE tokens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    token VARCHAR(255) NOT NULL,
+    funcion VARCHAR(50) NOT NULL,
+    fecha_exp DATETIME NOT NULL
+);

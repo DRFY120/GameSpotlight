@@ -1,7 +1,17 @@
+<?php
+ $servername = "localhost:3306";
+ $username = "root";
+ $password = "";
+ $dbname = "gamespotlight";
+ // Crear conexión
+ $conn = new mysqli($servername, $username, $password, $dbname);
+ // Verificar la conexión
+ if ($conn->connect_error) {
+ die("Conexión fallida: " . $conn->connect_error);
+ }
+?>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <link rel="stylesheet" href="../../bootstrap-5.3.0-dist/css/bootstrap.min.css">
   </head>
   
@@ -25,12 +35,12 @@
         </ul>
 
         <div class="text-end">
-        <a href="../Inicio y Registro de sesion/formulario.html">
           <button type="button"  class="btn btn-outline-primary me-2">Inicia Sesión</button>
-        </a>  
           <button type="button" class="btn btn-warning">Regístrate</button>
         </div>
       </div>
     </div>
   </header>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
